@@ -11,25 +11,26 @@ public class Enemy : MonoBehaviour
 	[ShowNonSerializedField] private GameObject PlayerREF;
 	private Rigidbody RB;
 
-	private void Awake()
+	private void Start()
 	{
 		PlayerREF = GameObject.FindGameObjectWithTag(PlayerTag);
 		RB = GetComponent<Rigidbody>();
+		transform.forward = (PlayerREF.transform.position - transform.position).normalized;
 	}
 
 	private void FixedUpdate()
 	{
-		Vector3 PlayerDir = (PlayerREF.transform.position - RB.position).normalized;
+		Vector3 PlayerDir = PlayerREF.transform.position - RB.position;
 
 		if (PlayerDir != Vector3.zero)
 		{
 			RB.MoveRotation(Quaternion.RotateTowards(RB.rotation,
-											   Quaternion.LookRotation(PlayerDir),
+											   Quaternion.LookRotation(PlayerDir.normalized),
 											   AngularSpeed * Time.fixedDeltaTime));
-		}
 
-		RB.MovePosition(Vector3.MoveTowards(RB.position,
-									  PlayerREF.transform.position,
-									  Speed * Time.fixedDeltaTime));
+			RB.MovePosition(Vector3.MoveTowards(RB.position,
+										  PlayerREF.transform.position,
+										  Speed * Time.fixedDeltaTime));
+		}
 	}
 }

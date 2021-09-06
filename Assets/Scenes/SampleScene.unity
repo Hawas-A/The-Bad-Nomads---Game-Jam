@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 4e83d2a67b40e2549853a277e228e59e, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 477cc4148fad3449482a3bc3178594e2, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -295,11 +295,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyPrefaps:
-  - {fileID: 5661936101202562708, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
-  - {fileID: 4104379459693470312, guid: 7b217b737a7f99649980a58b86d058c1, type: 3}
-  - {fileID: 4104379459693470312, guid: b5ab3816ae137cb438075068209f66a9, type: 3}
-  - {fileID: 4104379459693470312, guid: d9e38555f168b3745a06472004b8d580, type: 3}
-  - {fileID: 4104379459693470312, guid: 919ec8579d29cef4bbeefa78688a01fa, type: 3}
+  - {fileID: 7239958862274851582, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
+  - {fileID: 1305783875909623298, guid: 7b217b737a7f99649980a58b86d058c1, type: 3}
+  - {fileID: 1305783875909623298, guid: b5ab3816ae137cb438075068209f66a9, type: 3}
+  - {fileID: 1305783875909623298, guid: d9e38555f168b3745a06472004b8d580, type: 3}
+  - {fileID: 1305783875909623298, guid: 919ec8579d29cef4bbeefa78688a01fa, type: 3}
   SpawnRadius: 25
   SpawnRateRange: {x: 0.5, y: 3}
 --- !u!1 &1200655724
@@ -348,7 +348,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
