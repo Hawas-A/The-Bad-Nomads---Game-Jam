@@ -21,9 +21,12 @@ public class Enemy : MonoBehaviour
 	{
 		Vector3 PlayerDir = (PlayerREF.transform.position - RB.position).normalized;
 
-		RB.MoveRotation(Quaternion.RotateTowards(RB.rotation,
-										   Quaternion.LookRotation(PlayerDir),
-										   AngularSpeed * Time.fixedDeltaTime));
+		if (PlayerDir != Vector3.zero)
+		{
+			RB.MoveRotation(Quaternion.RotateTowards(RB.rotation,
+											   Quaternion.LookRotation(PlayerDir),
+											   AngularSpeed * Time.fixedDeltaTime));
+		}
 
 		RB.MovePosition(Vector3.MoveTowards(RB.position,
 									  PlayerREF.transform.position,
