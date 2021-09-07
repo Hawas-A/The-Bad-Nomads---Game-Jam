@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-	[SerializeField] private Enemy[] EnemyPrefaps;
-	[SerializeField] [Min(0)] private float SpawnRadius = 1;
 	[SerializeField] [MinMaxSlider(0, 10)] private Vector2 SpawnRateRange = new Vector2(0.5f, 3f);
 
+	private Enemy[] EnemyPrefaps;
 	[System.NonSerialized] public float SpawnRateMult = 1;
+
+	private void Awake()
+	{
+		EnemyPrefaps = FindObjectsOfType<Enemy>(true);
+		System.Array.ForEach(EnemyPrefaps, E => E.gameObject.SetActive(false));
+	}
 
 	private IEnumerator Start()
 	{
@@ -18,19 +23,9 @@ public class SpawnEnemies : MonoBehaviour
 			RandomDirection.z = 0;
 			RandomDirection.Normalize();
 
-			Instantiate(EnemyPrefaps[Random.Range(0, EnemyPrefaps.Length)], transform.TransformPoint(RandomDirection * SpawnRadius),
-				Quaternion.identity, transform);
+			//var Disabled
 
-			yield return new WaitForSeconds(Random.Range(SpawnRateRange.x, SpawnRateRange.y));
+			yield return new WaitForSeconds(SpawnRateMult * Random.Range(SpawnRateRange.x, SpawnRateRange.y));
 		}
-	}
-
-
-
-
-	private void OnDrawGizmosSelected()
-	{
-		Gizmos.color = Color.red;
-		Gizmos.DrawWireSphere(transform.position, SpawnRadius);
 	}
 }
