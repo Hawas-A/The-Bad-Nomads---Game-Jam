@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 858242917}
   - component: {fileID: 858242918}
   - component: {fileID: 858242919}
+  - component: {fileID: 858242920}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -507,6 +508,18 @@ MonoBehaviour:
   Bullet: {fileID: 2062975246856908590, guid: c25ebfb28b137004e8c15a82def4f610, type: 3}
   FirePointOffset: {x: 0, y: 1, z: 0}
   AttackSpeed: 1.5
+--- !u!114 &858242920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 858242914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35a08b59e31d1114199155d85c2a1212, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &965961322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3286113022946721933, guid: 919ec8579d29cef4bbeefa78688a01fa, type: 3}
