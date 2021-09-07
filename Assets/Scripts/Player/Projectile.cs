@@ -11,4 +11,13 @@ public class Projectile : MonoBehaviour
 		GetComponent<Rigidbody>().velocity = transform.forward * Speed;
 		Destroy(gameObject, LifeTime);
 	}
+
+	private void OnTriggerEnter(Collider other)
+	{
+		Enemy enemy = other.GetComponentInParent<Enemy>();
+		if (enemy)
+		{
+			enemy.OnHit();
+		}
+	}
 }

@@ -505,6 +505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerFireInput: {fileID: -5906482925001483238, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
   Bullet: {fileID: 2062975246856908590, guid: c25ebfb28b137004e8c15a82def4f610, type: 3}
+  FirePointOffset: {x: 0, y: 1, z: 0}
   AttackSpeed: 1.5
 --- !u!4 &965961322 stripped
 Transform:
@@ -631,7 +632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200655724}
   m_LocalRotation: {x: -0.000000051341186, y: 0.71325046, z: -0.70090926, w: -0.000000052245174}
-  m_LocalPosition: {x: 0, y: 23, z: 0}
+  m_LocalPosition: {x: 0, y: 26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1457142548}
@@ -835,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 23, z: 0}
+  m_FollowOffset: {x: 0, y: 26, z: 0}
   m_XDamping: 0.2
   m_YDamping: 0.2
   m_ZDamping: 0.2
@@ -1088,7 +1089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
   m_LocalRotation: {x: -0.000000051341186, y: 0.71325046, z: -0.70090926, w: -0.000000052245174}
-  m_LocalPosition: {x: 0, y: 23, z: 0}
+  m_LocalPosition: {x: 0, y: 26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
