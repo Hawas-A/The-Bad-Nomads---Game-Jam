@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-	[SerializeField] [Min(1)] private int SpawnRateRange = new Vector2(0.5f, 3f);
+	[SerializeField] [Min(1)] private int MaxSpawnCount = 3;
 	[SerializeField] [MinMaxSlider(0, 10)] private Vector2 SpawnRateRange = new Vector2(0.5f, 3f);
 
 	private Enemy[] Enemies;
@@ -25,14 +25,12 @@ public class SpawnEnemies : MonoBehaviour
 			RandomDirection.z = 0;
 			RandomDirection.Normalize();
 
-			for (int i = 0; i < length; i++)
+			var SpawnCount = Random.Range(1, MaxSpawnCount);
+			for (int i = 0; i < SpawnCount; i++)
 			{
-
+				var DisabledEnemies = Enemies.Where(E => !E.gameObject.activeSelf);
+				DisabledEnemies.ElementAt(Random.Range(0, DisabledEnemies.Count())).gameObject.SetActive(true);
 			}
-			var DisabledEnemies = Enemies.Where(E => !E.gameObject.activeSelf);
-			var enemy1 = DisabledEnemies.ElementAt(Random.Range(0, DisabledEnemies.Count()));
-			enemy1.gameObject.SetActive(true);
-
 			yield return new WaitForSeconds(SpawnRateMult * Random.Range(SpawnRateRange.x, SpawnRateRange.y));
 		}
 	}
