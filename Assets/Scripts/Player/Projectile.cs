@@ -19,5 +19,9 @@ public class Projectile : MonoBehaviour
 		{
 			enemy.OnHit();
 		}
+		else
+		{
+			Destroy(gameObject);
+		}
 	}
 }
