@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3780464874022803441}
   - component: {fileID: 6256042371552212459}
   - component: {fileID: 1989050532315319670}
-  - component: {fileID: 3644488615874905224}
   - component: {fileID: 7239958862274851582}
   m_Layer: 0
   m_Name: Enemy 1
@@ -98,22 +97,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &3644488615874905224
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661936101202562708}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &7239958862274851582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,5 +110,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTag: Player
-  Speed: 5
-  AngularSpeed: 10
+  ScoreWorth: 5
+  HitClip: {fileID: 0}
+  LifeTime: 5
+  LifeTimeScale:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 4.6391516
+      outSlope: 4.6391516
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.049822055
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -4.241476
+      outSlope: -4.241476
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.053381205
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TimeOutClip: {fileID: 0}
