@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 86288778}
   - component: {fileID: 86288777}
   - component: {fileID: 86288779}
+  - component: {fileID: 86288780}
   m_Layer: 0
   m_Name: Environment
   m_TagString: Untagged
@@ -289,6 +290,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxSpawnCount: 2
   SpawnRateRange: {x: 0.5, y: 3}
+--- !u!114 &86288780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86288776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b76253fd7a294a64a97e7ec72c89ffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RoundDuration>k__BackingField: 30
+  Inputs:
+  - {fileID: -1883406411959085621, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
+  - {fileID: -5906482925001483238, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
+  - {fileID: 8020936429708977543, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
 --- !u!4 &125704277 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3286113022946721933, guid: d9e38555f168b3745a06472004b8d580, type: 3}
