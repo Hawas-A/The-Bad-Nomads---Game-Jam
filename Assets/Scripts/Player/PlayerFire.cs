@@ -6,6 +6,7 @@ public class PlayerFire : MonoBehaviour
 {
 	[SerializeField] private InputActionReference PlayerFireInput;
 	[SerializeField] private Projectile Bullet;
+	[SerializeField] private Vector3 FirePointOffset = Vector3.up;
 	[SerializeField] [Min(0.01f)] private float AttackSpeed = 1.5f;
 
 	private void OnEnable()
@@ -21,7 +22,7 @@ public class PlayerFire : MonoBehaviour
 
 	private void OnFire(InputAction.CallbackContext CTX)
 	{
-		Instantiate(Bullet, transform.position, transform.rotation).Fire();
+		Instantiate(Bullet, transform.position + FirePointOffset, transform.rotation).Fire();
 		StartCoroutine(AttackCoolDownCOR());
 	}
 
