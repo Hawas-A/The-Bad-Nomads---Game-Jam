@@ -36,7 +36,7 @@ public class SpawnEnemies : MonoBehaviour
 			for (int i = 0; i < SpawnCount; i++)
 			{
 				Instantiate(Enemies[Random.Range(0, Enemies.Length)],
-					Vector3.ProjectOnPlane(Random.insideUnitSphere * SpawnRadius, Vector3.up),
+					Vector3.ProjectOnPlane(Random.insideUnitSphere * SpawnRadius, Vector3.up) + transform.position,
 					Quaternion.Euler(0, Random.Range(0, 360), 0),
 					transform);
 			}
