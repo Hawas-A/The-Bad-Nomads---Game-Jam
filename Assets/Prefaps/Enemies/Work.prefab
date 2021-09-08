@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5661936101202562708, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: m_Name
-      value: Dog
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 6628188006833826929, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: m_RootOrder
@@ -55,5 +55,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7239958862274851582, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
+      propertyPath: HitClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b8e87e1b62c6c74ea0723fb9f3c66f8, type: 3}
+    - target: {fileID: 7239958862274851582, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
+      propertyPath: TimeOutClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6a6abd1e9667da44994c89a02bb19163, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
