@@ -10,10 +10,10 @@ PrefabInstance:
     - target: {fileID: 3252798769750711532, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 58a6e566ccaf267448f3df02b60ec25d, type: 3}
+      objectReference: {fileID: 21300000, guid: 21a6bd731b610014c85425750dd22c0c, type: 3}
     - target: {fileID: 5661936101202562708, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: m_Name
-      value: Work
+      value: Car
       objectReference: {fileID: 0}
     - target: {fileID: 6628188006833826929, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: m_RootOrder
@@ -62,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 7239958862274851582, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: HitClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1b8e87e1b62c6c74ea0723fb9f3c66f8, type: 3}
+      objectReference: {fileID: 8300000, guid: 8ebd55bc9a0aaa043b6864cdd5e99620, type: 3}
     - target: {fileID: 7239958862274851582, guid: a8fba1a74b3be5245907e626b82f0e84, type: 3}
       propertyPath: TimeOutClip
       value: 
