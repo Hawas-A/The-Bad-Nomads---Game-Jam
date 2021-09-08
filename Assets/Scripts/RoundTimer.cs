@@ -23,6 +23,7 @@ public class RoundTimer : MonoBehaviour
 		if (RoundTimePercent == 1)
 		{
 			enabled = false;
+			FindObjectOfType<GameOverUI>(true).gameObject.SetActive(true);
 		}
 	}
 

@@ -10,14 +10,27 @@ public class SpawnEnemies : MonoBehaviour
 
 	private Enemy[] Enemies;
 	[System.NonSerialized] public float SpawnRateMult = 1;
+	private IEnumerator COR;
 
 	private void Awake()
 	{
 		Enemies = FindObjectsOfType<Enemy>(true);
 		System.Array.ForEach(Enemies, E => E.gameObject.SetActive(false));
+
+		COR = Spawn();
 	}
 
-	private IEnumerator Start()
+	private void OnEnable()
+	{
+		StartCoroutine(COR);
+	}
+
+	private void OnDisable()
+	{
+		StopCoroutine(COR);
+	}
+
+	private IEnumerator Spawn()
 	{
 		while (true)
 		{
