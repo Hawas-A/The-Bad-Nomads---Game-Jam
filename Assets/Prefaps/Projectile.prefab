@@ -162,6 +162,9 @@ MonoBehaviour:
   PlayerTag: Player
   Speed: 30
   LifeTime: 10
+  FireClip: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+  HitEnemyClip: {fileID: 0}
+  HitEnvironmentClip: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
 --- !u!82 &1819351270645486140
 AudioSource:
   m_ObjectHideFlags: 0
