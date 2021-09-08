@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
 	{
 		PlayerREF = GameObject.FindGameObjectWithTag(PlayerTag);
 		PlayerScore = PlayerREF.GetComponent<PlayerScore>();
+
 		AudioSource = new GameObject($"{name}'s Audio Scource").AddComponent<AudioSource>();
 		AudioSource.playOnAwake = false;
 		AudioSource.volume = AudioVloume;
