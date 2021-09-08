@@ -61,6 +61,6 @@ public class Enemy : MonoBehaviour
 
 		AudioSource.clip = HitClip;
 		AudioSource.Play();
-		Destroy(AudioSource.gameObject, HitClip ? HitClip.length : 0);
+		Destroy(AudioSource.gameObject, HitClip ? HitClip.length : 0.01f);
 	}
 }
