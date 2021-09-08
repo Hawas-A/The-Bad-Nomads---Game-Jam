@@ -144,6 +144,7 @@ MonoBehaviour:
   PlayerTag: Player
   VisualModel: {fileID: 7883887251548442088}
   SpawnClip: {fileID: 0}
+  AudioVloume: 0.3
   ScoreWorth: 5
   HitClip: {fileID: 8300000, guid: 4de656f9a757dd946bd22352fb8a9c00, type: 3}
   LifeTime: 5

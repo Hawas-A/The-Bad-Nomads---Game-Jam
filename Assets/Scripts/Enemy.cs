@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
 	private PlayerScore PlayerScore;
 	[SerializeField] private Transform VisualModel;
 	[SerializeField] private AudioClip SpawnClip;
+	[SerializeField] [Range(0, 1)] private float AudioVloume = 1f;
 
 	[Header("Hit By Player Settings")]
 	[SerializeField] [Min(0)] private int ScoreWorth = 5;
@@ -27,6 +28,7 @@ public class Enemy : MonoBehaviour
 		PlayerScore = PlayerREF.GetComponent<PlayerScore>();
 		AudioSource = new GameObject($"{name}'s Audio Scource").AddComponent<AudioSource>();
 		AudioSource.playOnAwake = false;
+		AudioSource.volume = AudioVloume;
 		AudioSource.transform.SetParent(transform.parent);
 		AudioSource.transform.SetPositionAndRotation(transform.position, transform.rotation);
 		AudioSource.clip = SpawnClip;

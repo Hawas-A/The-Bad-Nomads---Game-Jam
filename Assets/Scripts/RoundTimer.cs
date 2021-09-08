@@ -1,4 +1,5 @@
 using NaughtyAttributes;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,5 +31,8 @@ public class RoundTimer : MonoBehaviour
 	private void OnDisable()
 	{
 		System.Array.ForEach(Inputs, IAR => IAR.action.Disable());
+		System.Array.ForEach(FindObjectsOfType<Enemy>(), E => Destroy(E.gameObject));
+		System.Array.ForEach(FindObjectsOfType<AudioSource>().Where(AS => !AS.playOnAwake).ToArray(),
+			AS => AS.Stop());
 	}
 }

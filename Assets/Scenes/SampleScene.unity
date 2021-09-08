@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnvRotation: {fileID: -1883406411959085621, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
-  RotaionSpeed: 60
+  RotaionSpeed: 72
 --- !u!4 &86288778
 Transform:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b76253fd7a294a64a97e7ec72c89ffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <RoundDuration>k__BackingField: 60
+  <RoundDuration>k__BackingField: 45
   Inputs:
   - {fileID: -1883406411959085621, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
   - {fileID: -5906482925001483238, guid: ec73437a4a44fff428a50eaa91142bb9, type: 3}
@@ -10966,7 +10966,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1200655724}
-  m_LocalRotation: {x: 0.6938978, y: 0.00000010988635, z: -0.00000010589182, w: 0.7200736}
+  m_LocalRotation: {x: 0.6938978, y: -0.00000010988635, z: 0.00000010589182, w: 0.7200736}
   m_LocalPosition: {x: 0, y: 27, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14895,7 +14895,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: 0.6938978, y: 0.00000010988635, z: -0.00000010589182, w: 0.7200736}
+  m_LocalRotation: {x: 0.6938978, y: -0.00000010988635, z: 0.00000010589182, w: 0.7200736}
   m_LocalPosition: {x: 0, y: 27, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -16133,15 +16133,15 @@ MonoBehaviour:
     key0: {r: 1, g: 0, b: 0, a: 1}
     key1: {r: 1, g: 1, b: 0, a: 1}
     key2: {r: 0, g: 1, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 1, g: 0, b: 1, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 32768
-    ctime2: 65535
-    ctime3: 0
+    ctime2: 64880
+    ctime3: 65535
     ctime4: 0
     ctime5: 0
     ctime6: 0
@@ -16155,8 +16155,9 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 3
+    m_NumColorKeys: 4
     m_NumAlphaKeys: 2
+  BarFullScore: 600
 --- !u!4 &1997298806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6219204997867176044, guid: c7c425622b123f04684b4b4744e63c4a, type: 3}
