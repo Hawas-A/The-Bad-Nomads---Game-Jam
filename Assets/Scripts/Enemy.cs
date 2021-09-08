@@ -26,9 +26,8 @@ public class Enemy : MonoBehaviour
 		PlayerScore = PlayerREF.GetComponent<PlayerScore>();
 		AudioSource = new GameObject($"{name}'s Audio Scource").AddComponent<AudioSource>();
 		AudioSource.playOnAwake = false;
-		AudioSource.transform.parent = transform.parent;
-		AudioSource.transform.position = transform.position;
-		AudioSource.transform.rotation = transform.rotation;
+		AudioSource.transform.SetParent(transform.parent);
+		AudioSource.transform.SetPositionAndRotation(transform.position, transform.rotation);
 		AudioSource.clip = SpawnClip;
 		AudioSource.Play();
 	}
