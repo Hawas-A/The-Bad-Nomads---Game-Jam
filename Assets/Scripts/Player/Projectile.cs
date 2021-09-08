@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
 			GetComponent<Rigidbody>().velocity = Vector3.zero;
 			audioSource.clip = HitEnvironmentClip;
 			audioSource.Play();
-			Destroy(gameObject, HitEnvironmentClip ? HitEnvironmentClip.length : 0f);
+			Destroy(gameObject, HitEnvironmentClip ? HitEnvironmentClip.length : 0.01f);
 		}
 	}
 }
