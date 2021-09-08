@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 	[SerializeField] [Tag] private string PlayerTag;
 	[ShowNonSerializedField] private GameObject PlayerREF;
 	private PlayerScore PlayerScore;
+	[SerializeField] private Transform VisualModel;
 	[SerializeField] private AudioClip SpawnClip;
 
 	[Header("Hit By Player Settings")]
@@ -48,17 +49,18 @@ public class Enemy : MonoBehaviour
 		else
 		{
 			var LifeTimePercent = Mathf.Clamp01((Time.time - LifeTimeStart) / LifeTime);
-			transform.localScale = Vector3.one * LifeTimeScale.Evaluate(LifeTimePercent);
+			VisualModel.localScale = Vector3.one * LifeTimeScale.Evaluate(LifeTimePercent);
 		}
 	}
 
 
 	public void OnHit()
 	{
-		gameObject.SetActive(false);
+		Destroy(gameObject);
 		PlayerScore.Score += ScoreWorth;
 
 		AudioSource.clip = HitClip;
 		AudioSource.Play();
+		Destroy(AudioSource.gameObject, HitClip ? HitClip.length : 0);
 	}
 }
