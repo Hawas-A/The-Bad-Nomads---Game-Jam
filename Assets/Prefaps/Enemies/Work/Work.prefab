@@ -92,6 +92,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 1b8e87e1b62c6c74ea0723fb9f3c66f8, type: 3}
     - target: {fileID: 7239958862274851582, guid: a12e6a341f51c064e9234572d12ac90a, type: 3}
+      propertyPath: AudioVloume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7239958862274851582, guid: a12e6a341f51c064e9234572d12ac90a, type: 3}
       propertyPath: TimeOutClip
       value: 
       objectReference: {fileID: 8300000, guid: 6a6abd1e9667da44994c89a02bb19163, type: 3}
